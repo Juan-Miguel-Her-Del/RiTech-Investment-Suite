@@ -1,17 +1,18 @@
-# ritech_investment_suite
+﻿# RiTech — aplicación Flutter
 
-A new Flutter project.
+Frontend Flutter Material 3 con Riverpod. Incluye inicio de sesión, sesión JWT en
+memoria y dashboard con cotización NASDAQ 100.
 
-## Getting Started
+Consulta el [README del repositorio](../README.md) para iniciar FastAPI,
+PostgreSQL y Redis, crear usuarios de desarrollo y ejecutar la aplicación.
 
-This project is a starting point for a Flutter application.
+```powershell
+flutter pub get
+flutter run -d chrome --web-port 3000 --dart-define=API_BASE_URL=http://localhost:8000
+flutter analyze
+flutter test
+flutter build web
+```
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Organización: `lib/core/` contiene el cliente HTTP; `lib/features/auth/` gestiona
+login y sesión; `lib/features/dashboard/` consulta y presenta la cotización.
